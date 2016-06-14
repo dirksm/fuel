@@ -1,0 +1,1 @@
+{"virtualbox":{"/vagrant/sql":{"owner":"vagrant","group":"vagrant","guestpath":"/vagrant/sql","hostpath":"C:/Users/dirksm/git/fuel/sql","disabled":false},"/var/www/html":{"guestpath":"/var/www/html","hostpath":"C:/Users/dirksm/git/fuel/site","disabled":false},"/vagrant":{"guestpath":"/vagrant","hostpath":"C:/Users/dirksm/git/fuel","disabled":false}}}

@@ -1,0 +1,6 @@
+[submodule "site/fuel/modules/cronjobs"]
+	path = site/fuel/modules/cronjobs
+	url = git@github.com:daylightstudio/FUEL-CMS-Cronjobs-Module.git
+[submodule "site/fuel/modules/forms"]
+	path = site/fuel/modules/forms
+	url = git@github.com:daylightstudio/FUEL-CMS-Forms-Module.git

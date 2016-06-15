@@ -33,7 +33,7 @@
 */
 
 // The name of the site to be displayed at the top. Also used to generate your session key
-$config['site_name'] = 'MyWebsite';
+$config['site_name'] = 'Fuel Website';
 
 // Path to the fuel admin from the web base directory... MUST HAVE TRAILING SLASH!
 $config['fuel_path'] = FUEL_FOLDER.'/';
@@ -437,7 +437,8 @@ $config['parser_allowed_functions'] = array(
 	'fuel_block', 'fuel_model', 'fuel_nav', 'fuel_edit', 'fuel_set_var', 'fuel_var', 'fuel_var_append', 'fuel_form', 'fuel_page', // FUEL specific
 	'quote', 'safe_mailto', // HTML/URL specific
 	'session_flashdata', 'session_userdata', // Session specific
-	'prep_url', 'site_url', 'show_404', 'redirect', 'uri_segment', 'auto_typography', 'current_url' // CI specific
+	'prep_url', 'site_url', 'show_404', 'redirect', 'uri_segment', 'auto_typography', 'current_url', // CI specific
+    'form'
 );
 
 // Object references passed to the parsing engine

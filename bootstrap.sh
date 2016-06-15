@@ -5,6 +5,7 @@ DBROOTPASSWORD='12345678'
 DBPASSWORD='12345678'
 DBUSERNAME='fuel'
 DATABASE='fuel'
+SITENAME='myfuelcms.com'
 
 # update / upgrade
 echo updating os
@@ -23,6 +24,7 @@ echo installing mysql-server
 sudo apt-get -y install mysql-server > /dev/null
 echo installing php5-mysql
 sudo apt-get install php5-mysql > /dev/null
+sudo apt-get install php5-curl > /dev/null
 
 # install phpmyadmin and give password(s) to installer
 # for simplicity I'm using the same password for mysql and phpmyadmin
@@ -64,6 +66,10 @@ EOF
 )
 echo "${VHOST}" > /etc/apache2/sites-available/000-default.conf
 
+sudo debconf-set-selections <<< "postfix postfix/mailname string $SITENAME"
+sudo debconf-set-selections <<< "postfix postfix/main_mailer_type string 'Internet Site'"
+sudo apt-get install -y postfix
+
 # enable mod_rewrite
 sudo a2enmod rewrite
 
@@ -76,3 +82,6 @@ sudo php5enmod mcrypt
 
 # restart apache
 sudo service apache2 restart
+
+# install git
+sudo apt-get -y install git
